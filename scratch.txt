@@ -1,0 +1,19 @@
+npm run dev
+
+parvezkose@MacBook-Pro-4 api-design-v4 % npx prisma studio
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Prisma Studio is up on http://localhost:5555
+
+px prisma migrate dev
+
+
+POST UPDATE
+http://localhost:3001/api/update
+{
+  "title": "New feature who is this",
+  "body": "this is the best feature yet",
+  "productId": "3f00e2eb-57ca-466e-b0bf-78b420582d40"
+}
+
+//npx ts-jest config:init
