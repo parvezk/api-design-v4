@@ -17,3 +17,5 @@ http://localhost:3001/api/update
 }
 
 //npx ts-jest config:init
+
+https://stackoverflow.com/questions/67677320/this-is-not-the-tsc-command-you-are-looking-for

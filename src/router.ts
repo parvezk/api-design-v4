@@ -16,13 +16,14 @@ import {
 } from "./handlers/update";
 const router = Router();
 
+router.get("/", (req, res) => {
+  res.json({ message: "hello" });
+  // res.json({ message: req.shhh_secret });
+});
+
 /**
  * Product
  */
-/* router.get("/product", (req, res) => {
-  res.json({ message: "hello" });
-  // res.json({ message: req.shhh_secret });
-}); */
 router.get("/product", getProducts);
 
 router.get("/product/:id", getOneProduct);
