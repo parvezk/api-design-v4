@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   //res.status(401);
   //res.send('Nope');
 });
-console.log("BBBBBBB");
+console.log("express server started");
 app.use("/api", protect, router);
 app.post("/user", createNewUser);
 app.post("/signin", signIn);

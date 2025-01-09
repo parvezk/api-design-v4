@@ -1,11 +1,21 @@
 npm run dev
+LOCALHOST: http://localhost:3002
+
+When creating a new render.com DB:
+update env with DATABASE_URL
+run npx prisma migrate dev
+output:
+  `
+  The following migration(s) have been applied:
+  ...
+  Your database is now in sync with your schema.
+  ✔ Generated Prisma Client (v5.19.1) to ./node_modules/@prisma/client in 46ms
+  `
 
 npx prisma studio
 Environment variables loaded from .env
 Prisma schema loaded from prisma/schema.prisma
 Prisma Studio is up on http://localhost:5555
-
-px prisma migrate dev
 
 
 POST UPDATE

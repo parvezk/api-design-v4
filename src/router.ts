@@ -3,6 +3,7 @@ import { body, oneOf } from "express-validator";
 import { handleinputErrors } from "./modules/middleware";
 import {
   createProduct,
+  updateProduct,
   deleteProduct,
   getOneProduct,
   getProducts,
@@ -40,6 +41,7 @@ router.put(
   "/product/:id",
   body("name").isString(),
   handleinputErrors,
+  updateProduct,
   (req, res) => {}
 );
 
@@ -56,7 +58,7 @@ router.get("/update/:id", getOneUpdate);
 router.post(
   "/update",
   body("title").exists().isString(),
-  body("body").exists().isString(),
+  body("desc").exists().isString(),
   body("productId").exists().isString(),
   createUpdate
 );
@@ -64,8 +66,8 @@ router.post(
 router.put(
   "/update/:id",
   body("title").optional(),
-  body("body").optional(),
-  body("status").isIn(["IN_PROGRESS", "SHIPPED", "DEPRECATED"]).optional(),
+  body("desc").optional(),
+  body("status").isIn(["IN_PROGRESS", "LIVE", "DEPRECATED"]).optional(),
   body("version").optional(),
   updateUpdate
 );
@@ -102,7 +104,7 @@ router.delete("/updatepoint/:id", (req, res) => {});
 // so if you have a subrouter, you also have to add an error handler to that router at the bottom of those routes as well
 router.use((err, req, res, next) => {
   console.log(err);
-  res.json({ message: "in router handler" });
+  res.json({ message: "error in router handler" });
 });
 
 export default router;

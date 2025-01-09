@@ -42,7 +42,7 @@ export const createUpdate = async (req, res) => {
   const update = await prisma.update.create({
     data: {
       title: req.body.title,
-      body: req.body.body,
+      desc: req.body.desc,
       product: { connect: { id: product.id } },
       asset: "",
     },
