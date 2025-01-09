@@ -2,6 +2,7 @@ import prisma from "../db";
 import { createJWT, hashPassword, comparePasswords } from "../modules/auth";
 
 export const createNewUser = async (req, res, next) => {
+  console.log("createNewUser createNewUser");
   const hash = await hashPassword(req.body.password);
 
   try {

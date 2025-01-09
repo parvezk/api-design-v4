@@ -1,6 +1,6 @@
 npm run dev
 
-parvezkose@MacBook-Pro-4 api-design-v4 % npx prisma studio
+npx prisma studio
 Environment variables loaded from .env
 Prisma schema loaded from prisma/schema.prisma
 Prisma Studio is up on http://localhost:5555
@@ -19,3 +19,19 @@ http://localhost:3001/api/update
 //npx ts-jest config:init
 
 https://stackoverflow.com/questions/67677320/this-is-not-the-tsc-command-you-are-looking-for
+
+===
+psql \
+   --host=nodejs-api-design-v4.cdukqe24qimj.us-east-1.rds.amazonaws.com \
+   --port=5432 \
+   --username=postgres \
+   --password \
+   --dbname=nodejs-api-design-v4
+
+psql --host=mypostgresql.c6c8mwvfdgv0.us-west-2.rds.amazonaws.com --port=5432 --username=awsuser --password --dbname=mypgdb 
+====
+
+npx prisma migrate dev --preview-feature
+npx prisma migrate dev
+ npx prisma migrate dev --name init 
+======
